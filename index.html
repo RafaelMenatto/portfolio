@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- Declara o tipo de documento como HTML5, o padrão mais recente -->
+<html lang="pt-br">
+<!-- lang="pt-br" informa aos navegadores e leitores de tela que o site está em português do Brasil -->
+
+<head>
+    <!-- A tag <head> guarda informações sobre a página (não aparece no navegador) -->
+    <meta charset="UTF-8">
+    <!-- charset="UTF-8" garante que acentos e caracteres especiais (ã, ç, é) sejam exibidos corretamente -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Compatibilidade com o navegador Internet Explorer (recurso antigo) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Faz o site se adaptar ao tamanho da tela (essencial para celulares) -->
+    <title>Portfólio do Rafael</title>
+    <!-- <title> define o texto que aparece na aba do navegador -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <!-- Conecta o arquivo CSS (estilos) à página. "./styles/style.css" é o caminho do arquivo -->
+</head>
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo visível da página -->
+
+    <header class="cabecalho">
+        <!-- <header> representa o topo/cabeçalho do site -->
+        <nav class="cabecalho__menu">
+            <!-- <nav> define uma área de navegação (menu de links) -->
+            <a class="cabecalho__menu__link" href="index.html">Home</a>
+            <!-- <a> cria um link clicável; href aponta para o destino. Este vai para a página Home -->
+            <a class="cabecalho__menu__link" href="about.html">Sobre mim</a>
+            <!-- Link que leva para a página "Sobre mim" -->
+        </nav>
+    </header>
+
+    <main class="apresentacao">
+        <!-- <main> guarda o conteúdo principal da página (o que tem de mais importante) -->
+        <section class="apresentacao__conteudo">
+            <!-- <section> organiza o conteúdo em blocos/seções -->
+            <h1 class="apresentacao__conteudo__titulo">Eleve seu negócio digital a outro nível
+                <strong 
+            class="titulo-destaque"> com um serviço de qualidade!
+            </strong></h1>
+            <!-- <h1> é o título principal da página. <strong> deixa o trecho em destaque (negrito) e o class aplica a cor especial -->
+            <p class="apresentacao__conteudo__texto">Olá! Sou Rafael Menatto, desenvolvedor
+            HTML, CSS, PYTHON e JAVASCRIPT. Ajudo pequenos negócios a
+            colocarem em prática boas ideias. 
+            </p>
+            <p class="apresentacao__conteudo__texto">
+            
+            Vamos conversar? 🚀
+            </p>
+            <!-- <p> cria um parágrafo de texto -->
+
+            <div class="apresentacao__links">
+                <!-- <div> é uma "caixa" usada para agrupar elementos e organizar o layout -->
+                <h2 class="apresentacao__links__subtitulo">Acesse minhas redes</h2>
+                <!-- <h2> é um subtítulo (menor que o h1) -->
+
+                <a class="apresentacao__links__navegacao" href="https://github.com/RafaelMenatto">
+                    <!-- Link externo para o GitHub (href leva a outro site) -->
+                    <img src="./assets/github.png" alt="Ícone do GitHub">
+                    <!-- <img> insere uma imagem; src indica o caminho do arquivo -->
+                    Github
+                </a>
+                <a class="apresentacao__links__navegacao" href="https://www.linkedin.com/in/rafael-menatto">
+                    <img src="./assets/linkedin.png" alt="Ícone do LinkedIn">
+                    linkedin
+                </a>
+              
+            </div>
+        </section>
+
+        <img class="apresentacao__imagem" src="./assets/RAFAEL MENATTO.png" alt="Foto de Rafael Menatto">
+        <!-- Imagem principal da página. alt é a descrição para acessibilidade (lida por leitores de tela) -->
+    </main>
+
+    <footer class="rodape">
+        <!-- <footer> é o rodapé da página, fica na parte de baixo -->
+        <p>Desenvolvido por Rafael Menatto.</p>
+    </footer>
+</body>
+
+</html>
