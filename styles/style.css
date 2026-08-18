@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+/* @import baixa as fontes do Google Fonts: "Krona One" (para títulos) e "Montserrat" (para textos) */
+
+:root {
+    /* :root é onde criamos as "variáveis de cor/fonte" — um só lugar para reutilizar valores */
+    --cor-primaria: #000000;     /* cor principal (fundo preto) */
+    --cor-secundaria: #F6F6F6;   /* cor secundária (texto branco/acinzentado) */
+    --cor-terciaria: #22D4FD;    /* cor de destaque (azul claro) */
+    --cor-hover: #272727;        /* cor usada quando o mouse passa por cima de um botão */
+
+    --fonte-primaria: 'Krona One', sans-serif;      /* fonte para títulos */
+    --fonte-secundaria: 'Montserrat', sans-serif;   /* fonte para textos e links */
+}
+*{
+    /* O * (asterisco) seleciona TODOS os elementos da página */
+    margin: 0;   /* remove margens padrão do navegador */
+    padding: 0;  /* remove espaçamentos internos padrão */
+}
+
+body{
+    /* Estilos aplicados ao corpo inteiro da página */
+    box-sizing: border-box;                     /* inclui borda e padding no cálculo do tamanho */
+    background-color: var(--cor-primaria);      /* fundo preto usando a variável */
+    color: var(--cor-secundaria);               /* texto claro usando a variável */
+    min-height: 100vh;                          /* corpo ocupa pelo menos toda a altura da tela */
+    display: flex;                              /* ativa flexbox no body */
+    flex-direction: column;                     /* empilha header, main e footer na vertical */
+}
+main{
+    /* O <main> (conteúdo) cresce para ocupar o espaço, empurrando o footer para baixo */
+    flex: 1;
+}
+
+.cabecalho{
+    /* Cabeçalho: 2% de espaço em cima, 15% à esquerda (afasta o menu da borda) */
+    padding: 2% 0% 0% 15%;
+}
+.cabecalho__menu{
+    /* Menu: display flex coloca os links lado a lado, gap cria espaço entre eles */
+    display: flex;
+    gap: 80px;
+}
+.cabecalho__menu__link{
+    /* Links do menu */
+    font-family: var(--fonte-secundaria);   /* usa a fonte Montserrat */
+    font-size: 1.5rem;                      /* tamanho do texto (rem = relativo à raiz) */
+    font-weight: 600;                       /* espessura da fonte (600 = meio-negrito) */
+    color: var(--cor-terciaria);            /* cor azul de destaque */
+    text-decoration: none;                  /* remove o sublinhado padrão dos links */
+}
+.apresentacao{
+    /* Seção principal: flex alinha conteúdo e imagem lado a lado */
+    padding: 5% 15%;                        /* espaçamento interno da seção */
+    display: flex;
+    align-items: center;                    /* centraliza verticalmente */
+    justify-content: space-between;         /* texto à esquerda, imagem à direita */
+    gap: 82px;                              /* espaço entre texto e imagem */
+}
+.apresentacao__conteudo{
+    /* Bloco de texto principal */
+    width: 50%;                             /* ocupa metade da largura */
+    display: flex;
+    flex-direction: column;                 /* empilha os elementos na vertical */
+    gap: 40px;                              /* espaço entre título, parágrafo e links */
+}
+
+.apresentacao__conteudo__titulo{
+    /* Título (h1) */
+    font-size: 2.25rem;                     /* tamanho grande para o título principal */
+    font-family: var(--fonte-primaria);     /* usa a fonte Krona One */
+}
+.titulo-destaque{
+    /* Parte do título com destaque: ganha a cor azul */
+    color: var(--cor-terciaria);
+}
+.apresentacao__conteudo__texto{
+    /* Parágrafos de texto */
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__links{
+    /* Caixa que agrupa os botões das redes sociais */
+    display: flex;
+    flex-direction: column;                 /* botões empilhados na vertical */
+    justify-content: space-between;
+    align-items: center;                    /* centraliza os botões horizontalmente */
+    gap: 32px;                              /* espaço entre cada botão */
+}
+.apresentacao__links__subtitulo{
+    /* Subtítulo "Acesse minhas redes" */
+    font-family: var(--fonte-primaria);
+    font-weight: 400;                       /* peso normal (não negrito) */
+    font-size: 1.5rem;
+}
+.apresentacao__links__navegacao{
+    /* Estilo de cada botão de rede social */
+    display: flex;
+    justify-content: center;                /* centraliza o conteúdo do botão */
+    gap: 16px;                              /* espaço entre o ícone e o texto */
+    border: 2px solid var(--cor-terciaria); /* borda azul ao redor do botão */
+    width: 50%;                             /* largura do botão (metade da caixa) */
+    text-align: center;
+    border-radius: 8px;                     /* cantos arredondados */
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 21.5px 0;                      /* altura interna do botão */
+    text-decoration: none;                  /* sem sublinhado */
+    color: var(--cor-secundaria);           /* texto claro */
+    font-family: var(--fonte-secundaria);
+    cursor: pointer;                        /* mãozinha ao passar o mouse */
+    transition: background-color 0.3s;      /* transição suave do hover */
+}
+.apresentacao__links__navegacao:hover{
+    /* :hover = quando o mouse passa por cima do botão, o fundo muda */
+    background-color: var(--cor-hover);
+}
+.apresentacao__imagem{
+    /* Imagem principal da página */
+    width: 30%;                             /* ocupa 30% da largura */
+    height: auto;                           /* mantém a proporção da imagem */
+    border: 4px solid transparent;          /* borda invisível ao redor da foto */
+    border-radius: 12px;                    /* canto levemente arredondado */
+}
+.rodape{
+    /* Rodapé */
+    color: var(--cor-primaria);             /* texto preto */
+    background-color: var(--cor-terciaria); /* fundo azul */
+    padding: 24px;                          /* espaço interno */
+    text-align: center;                     /* centraliza o texto */
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.stack-icons a{
+    /* Estilo dos links dos ícones do stack */
+    transition: transform 0.3s;              /* transição suave de 0.3s ao animar a transformação */
+    display: inline-block;                   /* permite aplicar transformações (como translateY) nos links */
+    margin: 0 6px;                           /* espaçamento de 6px nas laterais de cada ícone */
+}
+.stack-icons a:hover{
+    /* Hover: quando o mouse passa por cima, o ícone sobe 4px */
+    transform: translateY(-4px);             /* move o ícone 4px para cima */
+}
+.rodape p{
+    /* Remove a margem extra do parágrafo do rodapé */
+    margin: 0;
+}
+
+@media (max-width: 1200px) {
+    /* @media = regras que só valem quando a tela for MENOR que 1200px (celular/tablet).
+       Isso é chamado de "design responsivo" */
+    .cabecalho{
+         padding: 10%;   /* aumenta o espaço no topo em telas menores */
+    }
+    .cabecalho__menu{
+        justify-content: center;   /* centraliza os links do menu */
+    }
+    .apresentacao{
+        flex-direction: column-reverse;  /* empilha verticalmente: imagem primeiro, depois texto */
+        padding: 5%;
+    }
+    .apresentacao__conteudo{
+        width: auto;   /* permite que o texto ocupe toda a largura da tela */
+    }
+    .apresentacao__imagem{
+        width: 40%;    /* imagem 10% maior no celular (30% -> 40%) */
+    }
+    .apresentacao__links__navegacao{
+        width: 100%;   /* botões ocupam toda a largura no celular */
+    }
+}

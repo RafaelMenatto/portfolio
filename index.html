@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!-- Declara o tipo de documento como HTML5, o padrão mais recente -->
+<html lang="pt-br">
+<!-- lang="pt-br" informa aos navegadores e leitores de tela que o site está em português do Brasil -->
+
+<head>
+    <!-- A tag <head> guarda informações sobre a página (não aparece no navegador) -->
+    <meta charset="UTF-8">
+    <!-- charset="UTF-8" garante que acentos e caracteres especiais (ã, ç, é) sejam exibidos corretamente -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Compatibilidade com o navegador Internet Explorer (recurso antigo) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Faz o site se adaptar ao tamanho da tela (essencial para celulares) -->
+    <title>Portfólio do Rafael</title>
+    <!-- <title> define o texto que aparece na aba do navegador -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <!-- Conecta o arquivo CSS (estilos) à página. "./styles/style.css" é o caminho do arquivo -->
+</head>
+
+<body>
+    <!-- A tag <body> contém todo o conteúdo visível da página -->
+
+    <header class="cabecalho">
+        <!-- <header> representa o topo/cabeçalho do site -->
+        <nav class="cabecalho__menu">
+            <!-- <nav> define uma área de navegação (menu de links) -->
+            <a class="cabecalho__menu__link" href="index.html">Home</a>
+            <!-- <a> cria um link clicável; href aponta para o destino. Este vai para a página Home -->
+            <a class="cabecalho__menu__link" href="about.html">Sobre mim</a>
+            <!-- Link que leva para a página "Sobre mim" -->
+        </nav>
+    </header>
+
+    <main class="apresentacao">
+        <!-- <main> guarda o conteúdo principal da página (o que tem de mais importante) -->
+        <section class="apresentacao__conteudo">
+            <!-- <section> organiza o conteúdo em blocos/seções -->
+            <h1 class="apresentacao__conteudo__titulo">Eleve seu negócio digital a outro nível
+                <strong 
+            class="titulo-destaque"> com um serviço de qualidade!
+            </strong></h1>
+            <!-- <h1> é o título principal da página. <strong> deixa o trecho em destaque (negrito) e o class aplica a cor especial -->
+            <p class="apresentacao__conteudo__texto">Olá! Sou Rafael Menatto, desenvolvedor
+            HTML, CSS, PYTHON e JAVASCRIPT. Ajudo pequenos negócios a
+            colocarem em prática boas ideias. 
+            </p>
+            <p class="apresentacao__conteudo__texto">Vamos conversar? 🚀</p>
+
+            <div class="apresentacao__links">
+                <!-- <div> é uma "caixa" usada para agrupar elementos e organizar o layout -->
+                <h2 class="apresentacao__links__subtitulo">Acesse minhas redes</h2>
+                <!-- <h2> é um subtítulo (menor que o h1) -->
+
+                <a class="apresentacao__links__navegacao" href="https://github.com/RafaelMenatto" target="_blank" rel="noopener noreferrer">
+                    <!-- Link externo para o GitHub (href leva a outro site) -->
+                    <img src="./assets/github.png" alt="Ícone do GitHub">
+                    <!-- <img> insere uma imagem; src indica o caminho do arquivo -->
+                    Github
+                    <!-- Texto "Github" que aparece ao lado do ícone dentro do botão -->
+                </a>
+                <a class="apresentacao__links__navegacao" href="https://www.linkedin.com/in/rafael-menatto" target="_blank" rel="noopener noreferrer">
+                    <!-- Botão com link para o LinkedIn (abre em nova aba por causa do target="_blank") -->
+                    <img src="./assets/linkedin.png" alt="Ícone do LinkedIn">
+                    <!-- Ícone do LinkedIn carregado do arquivo local ./assets -->
+                    linkedin
+                    <!-- Texto "linkedin" exibido ao lado do ícone -->
+                </a>
+
+                <h2 class="apresentacao__links__subtitulo">My Stack</h2>
+                <!-- Subtítulo "My Stack" (Minhas tecnologias) -->
+
+                <p class="stack-icons" align="center">
+                <!-- <p> com align="center" centraliza as imagens das tecnologias -->
+                  <a href="https://numero-kappa-two.vercel.app/" target="_blank" rel="noopener noreferrer"><img alt="HTML" title="HTML" width="30px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" /></a>
+                  <!-- Ícone do HTML carregado da internet (CDN); title mostra texto ao passar o mouse; width define a largura -->
+                  <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank" rel="noopener noreferrer"><img alt="CSS" title="CSS" width="30px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" /></a>
+                  <!-- Ícone do CSS vindo da mesma CDN (jsdelivr) -->
+                  <a href="https://ingresso-kohl-nu.vercel.app/" target="_blank" rel="noopener noreferrer"><img alt="JavaScript" title="JavaScript" width="30px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" /></a>
+                  <!-- Ícone do JavaScript vindo da CDN -->
+                  <a href="https://dados-python-ngrgtffqptdt8v6zqp9sbr.streamlit.app/" target="_blank" rel="noopener noreferrer"><img alt="Python" title="Python" width="30px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" /></a>
+                  <!-- Ícone do Python vindo da CDN -->
+                  <a href="https://git-scm.com/book/pt-br/v2/Come%c3%a7ando-Uma-Breve-Hist%c3%b3ria-do-Git" target="_blank" rel="noopener noreferrer"><img alt="Git" title="Git" width="30px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" /></a>
+                  <!-- Ícone do Git vindo da CDN -->
+                </p>
+            </div>
+        </section>
+
+        <img class="apresentacao__imagem" src="./assets/RAFAEL MENATTO.png" alt="Foto de Rafael Menatto">
+        <!-- Imagem principal da página. alt é a descrição para acessibilidade (lida por leitores de tela) -->
+    </main>
+
+    <footer class="rodape">
+        <!-- <footer> é o rodapé da página, fica na parte de baixo -->
+        <p>Desenvolvido por Rafael Menatto.</p>
+    </footer>
+</body>
+
+</html>
