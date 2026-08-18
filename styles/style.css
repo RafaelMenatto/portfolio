@@ -136,7 +136,7 @@ main{
     /* Estilo dos links dos ícones do stack */
     transition: transform 0.3s;              /* transição suave de 0.3s ao animar a transformação */
     display: inline-block;                   /* permite aplicar transformações (como translateY) nos links */
-    margin: 0 6px;                           /* espaçamento de 6px nas laterais de cada ícone */
+    margin: 0 1px;                           /* espaçamento de 1px nas laterais de cada ícone */
 }
 .stack-icons a:hover{
     /* Hover: quando o mouse passa por cima, o ícone sobe 4px */
