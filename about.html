@@ -11,8 +11,20 @@
     <!-- Compatibilidade com navegadores antigos (Internet Explorer) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Torna a página responsiva (adaptável a telas de celular/tablet) -->
+    <meta name="description" content="Sobre Rafael Menatto - Profissional de TI em transição para desenvolvimento de software, com experiência em hardware, infraestrutura e suporte.">
+    <!-- Meta description para SEO: resumo exibido nos resultados de busca -->
+    <meta name="keywords" content="sobre, desenvolvedor, TI, hardware, infraestrutura, suporte, Python, JavaScript">
+    <!-- Meta keywords: palavras-chave da página -->
+    <meta name="author" content="Rafael Menatto">
+    <!-- Meta author: nome do autor -->
+    <meta property="og:title" content="Sobre mim - Rafael Menatto">
+    <!-- Open Graph: título ao compartilhar a página -->
+    <meta property="og:description" content="Profissional de TI em transição para desenvolvimento de software, do hardware ao código.">
+    <!-- Open Graph: descrição ao compartilhar -->
     <title>Sobre mim</title>
     <!-- Título exibido na aba do navegador -->
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+    <!-- Favicon: ícone exibido na aba do navegador -->
     <link rel="stylesheet" href="./styles/style.css">
     <!-- Importa o mesmo arquivo CSS para manter o visual igual em todas as páginas -->
 </head>
@@ -28,6 +40,10 @@
             <!-- Link para voltar à página inicial -->
             <a class="cabecalho__menu__link" href="about.html">Sobre mim</a>
             <!-- Link para a própria página "Sobre mim" -->
+            <a class="cabecalho__menu__link" href="./assets/Currículo - Rafael Menatto.pdf" download target="_blank" rel="noopener noreferrer" aria-label="Baixar meu currículo em PDF">
+                <!-- Link que baixa o currículo em PDF -->
+                Currículo
+            </a>
         </nav>
     </header>
 
@@ -35,37 +51,37 @@
         <!-- Conteúdo principal da página -->
         <section class="apresentacao__conteudo">
             <!-- Seção que agrupa os textos -->
-            <h1 class="apresentacao__conteudo__titulo">Sobre mim</h1>
+            <h1 class="apresentacao__conteudo__titulo reveal">Sobre mim</h1>
             <!-- Título principal da seção -->
 
-            <p class="apresentacao__conteudo__texto">Profissional de TI em transição para o desenvolvimento de software, com 5+ anos de experiência prática no setor de tecnologia.
+            <p class="apresentacao__conteudo__texto reveal">Profissional de TI em transição para o desenvolvimento de software, com 5+ anos de experiência prática no setor de tecnologia.
 
             Minha trajetória começou no hardware: adquiri componentes, montei e revendi computadores de forma autônoma, o que me deu uma base sólida em como a tecnologia funciona "por baixo dos panos". Avancei para infraestrutura de TI e suporte, sendo responsável pela organização, manutenção e suporte de computadores e redes, além de ter ministrado aulas de informática — experiência que desenvolveu minha didática e comunicação técnica.
             </p>
             <!-- Primeiro parágrafo: apresentação profissional com experiência em TI e hardware -->
 
-            <p class="apresentacao__conteudo__texto">
+            <p class="apresentacao__conteudo__texto reveal">
                 Hoje estou me dedicando intensamente ao estudo de programação e Inteligência Artificial, estruturado minha base técnica com cursos e formações acadêmicas. Acredito que a combinação da minha experiência em infraestrutura com as novas habilidades em desenvolvimento me prepara para construir soluções completas, do hardware ao código.
                 </p>
                 <!-- Segundo parágrafo sobre a transição para programação -->
-                <p class="apresentacao__conteudo__texto">
+                <p class="apresentacao__conteudo__texto reveal">
                 <!-- Terceiro parágrafo listando as tecnologias estudadas -->
                 🛠️ Explorando: Python | JavaScript | HTML/CSS | Git | Inteligência Artificial<br>
                 💻 Base sólida: Hardware | Infraestrutura de TI | Redes | Suporte técnico.
                 <!-- Emojis e textos que resumem habilidades (explorando vs. base sólida) -->
                 </p>
 
-                <p class="apresentacao__conteudo__texto">
+                <p class="apresentacao__conteudo__texto reveal">
                 <!-- Quarto parágrafo sobre objetivos profissionais -->
                 🎯 Busco oportunidades em desenvolvimento de software onde eu possa continuar aprendendo e aplicar meu conhecimento em projetos reais. Sempre aberto a trocar ideias e colaborar!
                 <!-- Texto sobre busca de oportunidades e colaboração -->
                 </p>
-                <p class="apresentacao__conteudo__texto">Vamos conversar? 🚀</p>
+<p class="apresentacao__conteudo__texto reveal">Vamos conversar? 🚀</p>
 
-            <!-- Segundo parágrafo com mais conteúdo sobre a pessoa -->
-        </section>
+                <!-- Segundo parágrafo com mais conteúdo sobre a pessoa -->
+</section>
 
-        <img class="apresentacao__imagem" src="./assets/RAFAEL MENATTO.png" alt="Foto de Rafael Menatto">
+        <img class="apresentacao__imagem reveal" src="./assets/RAFAEL MENATTO.png" alt="Foto de Rafael Menatto">
         <!-- Imagem ao lado do texto; alt descreve a foto para acessibilidade -->
     </main>
 
@@ -73,6 +89,9 @@
         <!-- Rodapé (parte inferior) da página -->
         <p>Desenvolvido por Rafael Menatto.</p>
     </footer>
+
+    <script src="./scripts/script.js"></script>
+    <!-- Conecta o arquivo JavaScript responsável pelas animações dinâmicas -->
 </body>
 
 </html>

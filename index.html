@@ -11,8 +11,22 @@
     <!-- Compatibilidade com o navegador Internet Explorer (recurso antigo) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Faz o site se adaptar ao tamanho da tela (essencial para celulares) -->
+    <meta name="description" content="Portfólio de Rafael Menatto - Desenvolvedor HTML, CSS, Python e JavaScript. Auxilio pequenos negócios a colocarem boas ideias em prática.">
+    <!-- Meta description: resumo da página exibido nos resultados do Google -->
+    <meta name="keywords" content="desenvolvedor, web, portfólio, frontend, HTML, CSS, Python, JavaScript">
+    <!-- Meta keywords: palavras-chave relacionadas ao conteúdo -->
+    <meta name="author" content="Rafael Menatto">
+    <!-- Meta author: nome do autor da página -->
+    <meta property="og:title" content="Portfólio do Rafael Menatto">
+    <!-- Open Graph: título usado quando a página é compartilhada em redes sociais -->
+    <meta property="og:description" content="Eleve seu negócio digital a outro nível com um serviço de qualidade!">
+    <!-- Open Graph: descrição exibida ao compartilhar a página -->
+    <meta property="og:type" content="website">
+    <!-- Open Graph: tipo do conteúdo (site) -->
     <title>Portfólio do Rafael</title>
     <!-- <title> define o texto que aparece na aba do navegador -->
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+    <!-- Favicon: ícone exibido na aba do navegador -->
     <link rel="stylesheet" href="./styles/style.css">
     <!-- Conecta o arquivo CSS (estilos) à página. "./styles/style.css" é o caminho do arquivo -->
 </head>
@@ -28,6 +42,10 @@
             <!-- <a> cria um link clicável; href aponta para o destino. Este vai para a página Home -->
             <a class="cabecalho__menu__link" href="about.html">Sobre mim</a>
             <!-- Link que leva para a página "Sobre mim" -->
+            <a class="cabecalho__menu__link" href="./assets/Currículo - Rafael Menatto.pdf" download target="_blank" rel="noopener noreferrer" aria-label="Baixar meu currículo em PDF">
+                <!-- Link que baixa o currículo em PDF -->
+                Currículo
+            </a>
         </nav>
     </header>
 
@@ -35,30 +53,30 @@
         <!-- <main> guarda o conteúdo principal da página (o que tem de mais importante) -->
         <section class="apresentacao__conteudo">
             <!-- <section> organiza o conteúdo em blocos/seções -->
-            <h1 class="apresentacao__conteudo__titulo">Eleve seu negócio digital a outro nível
+            <h1 class="apresentacao__conteudo__titulo reveal">Eleve seu negócio digital a outro nível
                 <strong 
-            class="titulo-destaque"> com um serviço de qualidade!
+            class="titulo-destaque"> <span data-typing></span><span data-cursor class="cursor">|</span>
             </strong></h1>
             <!-- <h1> é o título principal da página. <strong> deixa o trecho em destaque (negrito) e o class aplica a cor especial -->
-            <p class="apresentacao__conteudo__texto">Olá! Sou Rafael Menatto, desenvolvedor
+            <p class="apresentacao__conteudo__texto reveal">Olá! Sou Rafael Menatto, desenvolvedor
             HTML, CSS, PYTHON e JAVASCRIPT. Ajudo pequenos negócios a
             colocarem em prática boas ideias. 
             </p>
-            <p class="apresentacao__conteudo__texto">Vamos conversar? 🚀</p>
+            <p class="apresentacao__conteudo__texto reveal">Vamos conversar? 🚀</p>
 
-            <div class="apresentacao__links">
+            <div class="apresentacao__links reveal">
                 <!-- <div> é uma "caixa" usada para agrupar elementos e organizar o layout -->
                 <h2 class="apresentacao__links__subtitulo">Acesse minhas redes</h2>
                 <!-- <h2> é um subtítulo (menor que o h1) -->
 
-                <a class="apresentacao__links__navegacao" href="https://github.com/RafaelMenatto" target="_blank" rel="noopener noreferrer">
+                <a class="apresentacao__links__navegacao" href="https://github.com/RafaelMenatto" target="_blank" rel="noopener noreferrer" aria-label="Abrir meu perfil no GitHub">
                     <!-- Link externo para o GitHub (href leva a outro site) -->
                     <img src="./assets/github.png" alt="Ícone do GitHub">
                     <!-- <img> insere uma imagem; src indica o caminho do arquivo -->
-                    Github
-                    <!-- Texto "Github" que aparece ao lado do ícone dentro do botão -->
+                    GitHub
+                    <!-- Texto "GitHub" que aparece ao lado do ícone dentro do botão -->
                 </a>
-                <a class="apresentacao__links__navegacao" href="https://www.linkedin.com/in/rafael-menatto" target="_blank" rel="noopener noreferrer">
+                <a class="apresentacao__links__navegacao" href="https://www.linkedin.com/in/rafael-menatto" target="_blank" rel="noopener noreferrer" aria-label="Abrir meu perfil no LinkedIn">
                     <!-- Botão com link para o LinkedIn (abre em nova aba por causa do target="_blank") -->
                     <img src="./assets/linkedin.png" alt="Ícone do LinkedIn">
                     <!-- Ícone do LinkedIn carregado do arquivo local ./assets -->
@@ -71,21 +89,21 @@
 
                 <p class="stack-icons" align="center">
                 <!-- <p> com align="center" centraliza as imagens das tecnologias -->
-                  <a href="https://treino-raciocinio-logico.vercel.app/" target="_blank" rel="noopener noreferrer"><img alt="HTML" title="HTML" width="30px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" /></a>
+                  <a href="https://treino-raciocinio-logico.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Ver projeto em HTML"><img alt="HTML" title="HTML" width="45px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" /></a>
                   <!-- Ícone do HTML carregado da internet (CDN); title mostra texto ao passar o mouse; width define a largura -->
-                  <a href="https://plus-books.vercel.app/" target="_blank" rel="noopener noreferrer"><img alt="CSS" title="CSS" width="30px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" /></a>
+                  <a href="https://plus-books.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Ver projeto em CSS"><img alt="CSS" title="CSS" width="45px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" /></a>
                   <!-- Ícone do CSS vindo da mesma CDN (jsdelivr) -->
-                  <a href="https://ingresso-kohl-nu.vercel.app/" target="_blank" rel="noopener noreferrer"><img alt="JavaScript" title="JavaScript" width="30px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" /></a>
+                  <a href="https://ingresso-kohl-nu.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Ver projeto em JavaScript"><img alt="JavaScript" title="JavaScript" width="45px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" /></a>
                   <!-- Ícone do JavaScript vindo da CDN -->
-                  <a href="https://dados-python-ngrgtffqptdt8v6zqp9sbr.streamlit.app/" target="_blank" rel="noopener noreferrer"><img alt="Python" title="Python" width="30px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" /></a>
+                  <a href="https://dados-python-ngrgtffqptdt8v6zqp9sbr.streamlit.app/" target="_blank" rel="noopener noreferrer" aria-label="Ver projeto em Python"><img alt="Python" title="Python" width="45px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" /></a>
                   <!-- Ícone do Python vindo da CDN -->
-                  <a href="https://git-scm.com/about" target="_blank" rel="noopener noreferrer"><img alt="Git" title="Git" width="30px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" /></a>
+                  <a href="https://git-scm.com/about" target="_blank" rel="noopener noreferrer" aria-label="Ver o site oficial do Git"><img alt="Git" title="Git" width="45px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" /></a>
                   <!-- Ícone do Git vindo da CDN -->
                 </p>
             </div>
         </section>
 
-        <img class="apresentacao__imagem" src="./assets/RAFAEL MENATTO.png" alt="Foto de Rafael Menatto">
+        <img class="apresentacao__imagem reveal" src="./assets/RAFAEL MENATTO.png" alt="Foto de Rafael Menatto">
         <!-- Imagem principal da página. alt é a descrição para acessibilidade (lida por leitores de tela) -->
     </main>
 
@@ -93,6 +111,9 @@
         <!-- <footer> é o rodapé da página, fica na parte de baixo -->
         <p>Desenvolvido por Rafael Menatto.</p>
     </footer>
+
+    <script src="./scripts/script.js"></script>
+    <!-- Conecta o arquivo JavaScript responsável pelas animações dinâmicas -->
 </body>
 
 </html>

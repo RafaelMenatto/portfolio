@@ -15,6 +15,10 @@
     /* O * (asterisco) seleciona TODOS os elementos da página */
     margin: 0;   /* remove margens padrão do navegador */
     padding: 0;  /* remove espaçamentos internos padrão */
+    box-sizing: border-box;                     /* inclui borda e padding no cálculo do tamanho */
+}
+html{
+    scroll-behavior: smooth;                     /* rolagem suave ao navegar por âncoras */
 }
 
 body{
@@ -29,6 +33,19 @@ body{
 main{
     /* O <main> (conteúdo) cresce para ocupar o espaço, empurrando o footer para baixo */
     flex: 1;
+}
+
+/* ===== Animações de entrada ===== */
+@keyframes fadeInUp {
+    /* Animação: o elemento sobe levemente enquanto "aparece" (opacidade de 0 até 1) */
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .cabecalho{
@@ -47,6 +64,28 @@ main{
     font-weight: 600;                       /* espessura da fonte (600 = meio-negrito) */
     color: var(--cor-terciaria);            /* cor azul de destaque */
     text-decoration: none;                  /* remove o sublinhado padrão dos links */
+    position: relative;                     /* permite posicionar o sublinhado animado */
+    padding-bottom: 4px;                    /* espaço para o sublinhado aparecer */
+    transition: color 0.3s ease;            /* transição suave da cor */
+}
+.cabecalho__menu__link::after{
+    /* Pseudo-elemento: cria uma linha azul embaixo do link */
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--cor-secundaria);   /* linha branca */
+    transition: width 0.3s ease;               /* anima a largura da linha */
+}
+.cabecalho__menu__link:hover{
+    /* Hover no link do menu */
+    color: var(--cor-secundaria);              /* texto fica branco */
+}
+.cabecalho__menu__link:hover::after{
+    /* A linha branca cresce da esquerda para a direita no hover */
+    width: 100%;
 }
 .apresentacao{
     /* Seção principal: flex alinha conteúdo e imagem lado a lado */
@@ -62,6 +101,7 @@ main{
     display: flex;
     flex-direction: column;                 /* empilha os elementos na vertical */
     gap: 40px;                              /* espaço entre título, parágrafo e links */
+    animation: fadeInUp 0.8s ease both;     /* animação de entrada suave no carregamento */
 }
 
 .apresentacao__conteudo__titulo{
@@ -114,13 +154,29 @@ main{
 .apresentacao__links__navegacao:hover{
     /* :hover = quando o mouse passa por cima do botão, o fundo muda */
     background-color: var(--cor-hover);
+    border-color: var(--cor-secundaria);    /* borda fica mais clara no hover */
+    transform: translateY(-3px);            /* o botão "sobe" levemente */
+    box-shadow: 0 6px 20px rgba(34, 212, 253, 0.4); /* brilho azul suave ao redor */
+    color: var(--cor-terciaria);            /* texto fica azul no hover */
+}
+.apresentacao__links__navegacao img{
+    /* Ícones dentro dos botões */
+    width: 24px;                            /* tamanho do ícone */
+    height: 24px;                           /* mantém altura igual à largura */
+    filter: drop-shadow(0 0 4px rgba(34, 212, 253, 0.5)); /* leve brilho no ícone */
 }
 .apresentacao__imagem{
     /* Imagem principal da página */
     width: 30%;                             /* ocupa 30% da largura */
     height: auto;                           /* mantém a proporção da imagem */
-    border: 4px solid transparent;          /* borda invisível ao redor da foto */
+    border: none;                           /* sem borda na foto */
     border-radius: 12px;                    /* canto levemente arredondado */
+    box-shadow: 0 0 25px rgba(34, 212, 253, 0.35); /* brilho azul suave ao redor */
+    transition: box-shadow 0.3s ease;       /* transição suave do brilho (o efeito parallax controla a posição) */
+}
+.apresentacao__imagem:hover{
+    /* Quando o mouse passa pela foto, o brilho aumenta */
+    box-shadow: 0 0 40px rgba(34, 212, 253, 0.55); /* brilho mais forte no hover */
 }
 .rodape{
     /* Rodapé */
@@ -134,17 +190,51 @@ main{
 }
 .stack-icons a{
     /* Estilo dos links dos ícones do stack */
-    transition: transform 0.3s;              /* transição suave de 0.3s ao animar a transformação */
+    transition: transform 0.3s ease, filter 0.3s ease; /* transição suave na posição e no brilho */
     display: inline-block;                   /* permite aplicar transformações (como translateY) nos links */
-    margin: 0 1px;                           /* espaçamento de 1px nas laterais de cada ícone */
+    margin: 0 8px;                           /* espaçamento maior nas laterais de cada ícone */
+}
+.stack-icons a img{
+    /* Ícones das tecnologias */
+    transition: filter 0.3s ease;            /* transição suave do brilho */
 }
 .stack-icons a:hover{
-    /* Hover: quando o mouse passa por cima, o ícone sobe 4px */
+    /* Hover: quando o mouse passa por cima, o ícone sobe e ganha brilho */
     transform: translateY(-4px);             /* move o ícone 4px para cima */
+}
+.stack-icons a:hover img{
+    filter: drop-shadow(0 0 10px rgba(34, 212, 253, 0.8)); /* brilho azul forte no ícone */
 }
 .rodape p{
     /* Remove a margem extra do parágrafo do rodapé */
     margin: 0;
+}
+
+/* ===== Animações ao rolar a página (scroll reveal) ===== */
+.reveal{
+    /* Elementos começam invisíveis e deslocados para baixo... */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease; /* ...e ganham transição suave */
+}
+.reveal.visible{
+    /* ...até que a classe "visible" (adicionada pelo script.js) os revela */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== Cursor do efeito de digitação ===== */
+.cursor{
+    /* Cursor "|" que pisca durante a digitação */
+    display: inline-block;
+    margin-left: 4px;
+    color: var(--cor-terciaria);
+    animation: piscar 0.8s infinite;    /* loop infinito piscando */
+}
+@keyframes piscar{
+    /* Alterna entre visível e invisível para criar o efeito de piscar */
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 
 @media (max-width: 1200px) {
@@ -168,5 +258,39 @@ main{
     }
     .apresentacao__links__navegacao{
         width: 100%;   /* botões ocupam toda a largura no celular */
+    }
+    .apresentacao__links__subtitulo{
+        font-size: 1.25rem;   /* subtítulo um pouco menor em telas médias */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Regras extras para telas bem pequenas (celulares) */
+    .cabecalho{
+        padding: 8% 2% 3%;     /* margem superior para os links do menu */
+        background: linear-gradient(180deg, rgba(39, 39, 39, 0.6), rgba(39, 39, 39, 0)); /* degradê suave que se esvai para baixo */
+    }
+.cabecalho__menu{
+        gap: 28px;             /* espaçamento um pouco maior entre os links, todos na mesma linha */
+        flex-wrap: nowrap;     /* impede que os links quebrem linha — "Sobre mim" fica na mesma linha */
+    }
+    .cabecalho__menu__link{
+        font-size: 1.3rem;       /* fonte do menu maior mantendo tudo na mesma linha */
+    }
+    .apresentacao__conteudo__titulo{
+        font-size: 1.75rem;    /* título menor para caber em telas pequenas */
+    }
+    .apresentacao__conteudo__texto{
+        font-size: 1.25rem;    /* textos menores em telas pequenas */
+    }
+    .apresentacao__imagem{
+        width: 60%;            /* imagem um pouco maior em telas pequenas */
+        margin-top: 30px;      /* margem superior maior para dar respiro */
+    }
+    .apresentacao__links{
+        gap: 24px;             /* menos espaço entre os botões */
+    }
+    .rodape{
+        font-size: 1rem;       /* fonte do rodapé menor */
     }
 }
